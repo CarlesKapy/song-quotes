@@ -1,0 +1,29 @@
+{
+  "name": "song-quotes",
+  "version": "1.0.0",
+  "description": "A REST API to get song quotes",
+  "author": "Carles Capell <carles.capell.87@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://carlescapell.me",
+  "keywords": ["rest", "api", "express", "typescript"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CarlesKapy/song-quotes"
+  },
+  "scripts": {
+    "build": "rm -rf build && tsc",
+    "start": "node ./build/bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "json-query": "^2.2.2",
+    "typescript": "^2.6.2",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.57"
+  }
+}
