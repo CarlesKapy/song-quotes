@@ -37,7 +37,7 @@ app.use('/api/v1', api)
 
 
 // Static files served from public folder
-app.use(express.static('public'))
+app.use(express.static('dist/public'))
 
 // No route found
 app.use( (req, res, next) => {
