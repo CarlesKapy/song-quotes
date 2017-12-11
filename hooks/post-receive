@@ -1,5 +1,5 @@
 #!/bin/sh
-. /home/deploy/.bashrc
+. $HOME/.nvm/nvm.sh
 env
 git --work-tree=/var/www/song-quotes.carlescapell.me/public_html/ --git-dir=/var/www/song-quotes.carlescapell.me/.git checkout -f
 cd /var/www/song-quotes.carlescapell.me/public_html
