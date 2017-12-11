@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
 if [ $TRAVIS_BRANCH == 'master' ] ; then
-    # Initialize a new git repo in _site, and push it to our server.
+    echo "Push received. Deploying app..."
     git init
 
     git remote add deploy "deploy@carlescapell.me:/var/www/song-quotes.carlescapell.me"
