@@ -1,19 +1,17 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "build/",
+    "outDir": "dist/",
     "target": "es2017",
     "module": "commonjs",
     "allowSyntheticDefaultImports": true,
-    "types": ["node"],
-    "typeRoots": ["node_modules/@types"],
     "allowJs": true,
     "sourceMap": false,
     "noUnusedLocals": true
   },
   "include": ["**/*.ts"],
   "exclude": [
-    "**/build/*",
-    "**/node_modules/*"
+    "dist",
+    "node_modules",
+    "typings"
   ]
 }

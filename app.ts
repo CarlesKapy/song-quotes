@@ -31,12 +31,13 @@ app.set('twig options', {
     strict_variables: false
 })
 
-// Static files served from public folder
-app.use(express.static('public'))
-
 // Routes
 app.use('/', landing)
 app.use('/api/v1', api)
+
+
+// Static files served from public folder
+app.use(express.static('public'))
 
 // No route found
 app.use( (req, res, next) => {

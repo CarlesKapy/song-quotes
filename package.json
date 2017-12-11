@@ -16,13 +16,14 @@
     "url": "https://github.com/CarlesKapy/song-quotes"
   },
   "scripts": {
-    "build": "npm run clean && npm run compile && npm run copy:assets",
-    "start": "node ./build/bin/www",
-    "clean": "rm -rf build",
-    "compile": "tsc",
-    "copy:assets": "copyfiles \"./views/**/*\" \"./public/**/*\" ./build/"
+    "dev": "NODE_ENV=development nodemon ./bin/www",
+    "grunt": "grunt",
+    "test": "mocha dist/test",
+    "start": "node ./dist/bin/www"
   },
   "dependencies": {
+    "@types/chai-http": "^3.0.3",
+    "@types/node": "^8.0.57",
     "body-parser": "^1.18.2",
     "bulma": "^0.6.1",
     "copyfiles": "^1.2.0",
@@ -35,6 +36,17 @@
     "uuid": "^3.1.0"
   },
   "devDependencies": {
-    "@types/node": "^8.0.57"
+    "@types/chai": "^4.0.8",
+    "@types/mocha": "^2.2.44",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-ts": "^6.0.0-beta.10",
+    "mocha": "^3.1.2",
+    "mocha-typescript": "^1.0.11",
+    "nodemon": "^1.11.0",
+    "typings": "^2.1.1"
   }
 }
