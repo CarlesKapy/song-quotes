@@ -8,7 +8,7 @@ before_install:
   -in deploy-key.enc -out deploy-key -d
 - npm install -g typescript grunt-cli
 - npm install
-- bash .scripts/intsall.sh
+- bash .scripts/install.sh
 install:
 - npm run grunt
 script:
