@@ -5,21 +5,32 @@
   "author": "Carles Capell <carles.capell.87@gmail.com>",
   "license": "MIT",
   "homepage": "https://carlescapell.me",
-  "keywords": ["rest", "api", "express", "typescript"],
+  "keywords": [
+    "rest",
+    "api",
+    "express",
+    "typescript"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/CarlesKapy/song-quotes"
   },
   "scripts": {
-    "build": "rm -rf build && tsc",
-    "start": "node ./build/bin/www"
+    "build": "npm run clean && npm run compile && npm run copy:assets",
+    "start": "node ./build/bin/www",
+    "clean": "rm -rf build",
+    "compile": "tsc",
+    "copy:assets": "copyfiles \"./views/**/*\" \"./public/**/*\" ./build/"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
+    "bulma": "^0.6.1",
+    "copyfiles": "^1.2.0",
     "dotenv": "^4.0.0",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
     "json-query": "^2.2.2",
+    "twig": "^1.10.5",
     "typescript": "^2.6.2",
     "uuid": "^3.1.0"
   },
