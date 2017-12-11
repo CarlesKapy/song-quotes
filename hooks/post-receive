@@ -1,0 +1,8 @@
+#!/bin/sh
+. /home/deploy/.bashrc
+env
+git --work-tree=/var/www/song-quotes.carlescapell.me/public_html/ --git-dir=/var/www/song-quotes.carlescapell.me/.git checkout -f
+cd /var/www/song-quotes.carlescapell.me/public_html
+npm install
+npm run grunt
+forever stopall
