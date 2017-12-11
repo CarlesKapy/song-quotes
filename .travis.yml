@@ -7,8 +7,5 @@ before_install:
 - npm install -g typescript grunt-cli
 - npm run grunt
 
-install:
-- npm install --dev
-
 script:
 - npm test
