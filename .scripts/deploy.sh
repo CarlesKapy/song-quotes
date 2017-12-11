@@ -4,7 +4,7 @@ if [ $TRAVIS_BRANCH == 'master' ] ; then
     # Initialize a new git repo in _site, and push it to our server.
     git init
 
-    git remote add deploy "deploy@carlescapell.me:/var/www/kjaermaxi.me"
+    git remote add deploy "deploy@carlescapell.me:/var/www/song-quotes.carlescapell.me"
     git config user.name "Travis CI"
     git config user.email "carles.capell.87@gmail.com"
 
