@@ -5,6 +5,7 @@ node_js:
 
 before_install:
 - npm install -g typescript grunt-cli
+- npm install
 
 install:
 - npm run grunt
