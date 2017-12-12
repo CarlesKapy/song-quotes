@@ -3,6 +3,23 @@ import findQuote from "../../repository/QuoteRepository"
 
 const router = express.Router()
 
+/**
+ * @apiGroup SongQuote
+ * @apiName GetSongQuote
+ * @apiVersion 1.0.0
+ *
+ * @apiDescription Endpoint to retrive a song quote that matches with criteria
+ *
+ * @api {get} /songquote Retrieve Song quote
+ * @apiParam {String} lang Language of the quote
+ *
+ * @apiSuccess {String} lang   Language of the quote
+ * @apiSuccess {String} artist Author of the quote
+ * @apiSuccess {String} song   Title of the song where quotes appear
+ * @apiSuccess {String} quote  Quote
+ *
+ * @apiError 400 Bad Request (no lang informed)
+ */
 router.get('/songquote', (req, res, next) => {
     const queryIsEmpty = Object.keys(req.query).length === 0
 

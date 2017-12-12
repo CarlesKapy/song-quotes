@@ -8,7 +8,7 @@ module.exports = function(grunt) {
                     style: 'expanded'
                 },
                 files: {
-                    'sass/main.css': 'sass/main.sass'
+                    'src/sass/main.css': 'src/sass/main.sass'
                 }
             }
         },
@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         cssmin: {
             dist: {
                 files: {
-                    'dist/public/css/main.min.css': 'sass/main.css'
+                    'dist/public/css/main.min.css': 'src/sass/main.css'
                 }
             }
         },
@@ -25,13 +25,13 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: "./public",
+                        cwd: "./src/public",
                         src: ["**"],
                         dest: "./dist/public"
                     },
                     {
                         expand: true,
-                        cwd: "./views",
+                        cwd: "./src/views",
                         src: ["**"],
                         dest: "./dist/views"
                     }
@@ -43,21 +43,31 @@ module.exports = function(grunt) {
                 tsconfig: true
             }
         },
+        apidoc: {
+            myapp: {
+                src: "src/",
+                dest: "src/public/doc",
+                options: {
+                    debug: true,
+                    excludeFilters: [ "node_modules/", "dist/" ]
+                }
+            }
+        },
         watch: {
             ts: {
-                files: ["\*\*/\*.ts"],
+                files: ["src/\*\*/\*.ts"],
                 tasks: ["ts"]
             },
             views: {
-                files: ["views/**/*.twig"],
+                files: ["src/views/**/*.twig"],
                 tasks: ["copy"]
             },
             sass: {
-                files: ['sass/**/*.sass'],
+                files: ['src/sass/**/*.sass'],
                 tasks: ['sass']
             },
             styles: {
-                files: ['sass/main.css'],
+                files: ['src/sass/main.css'],
                 tasks: ['cssmin']
             }
         }
@@ -68,8 +78,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-copy");
     grunt.loadNpmTasks("grunt-contrib-watch");
     grunt.loadNpmTasks("grunt-ts");
+    grunt.loadNpmTasks('grunt-apidoc');
 
     grunt.registerTask("default", [
+        "apidoc",
         "sass",
         "cssmin",
         "copy",
