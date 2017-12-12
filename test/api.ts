@@ -6,7 +6,7 @@ const expect = chai.expect
 
 chai.use(chaiHttp);
 
-const testServerApp = require('../app')
+const testServerApp = require('../src/app')
 
 
 describe('Song quote', () => {
