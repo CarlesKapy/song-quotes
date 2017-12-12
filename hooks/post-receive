@@ -8,8 +8,6 @@ export NODE_VERSION="8.9.3"
 . $HOME/.nvm/nvm.sh
 nvm use $NODE_VERSION
 
-env
-
 git --work-tree=/var/www/song-quotes.carlescapell.me/public_html/ --git-dir=/var/www/song-quotes.carlescapell.me/.git checkout -f
 cd /var/www/song-quotes.carlescapell.me/public_html
 npm install
