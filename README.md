@@ -4,6 +4,7 @@
 
 A simple TypeScript REST api to retrieve song quotes.
 
-Built and deployed automatically with TravisCI.
-
 [Song Quotes](https://song-quotes.carlescapell.me)
+[ApiDoc](https://song-quotes.carlescapell.me/doc/)
+
+Built and deployed automatically with TravisCI.
