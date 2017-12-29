@@ -18,6 +18,7 @@ export const QUOTES = [
     {lang: "es", genre:"hiphop", artist: "Kase.O", song:"Esto no para", quote:"La llaman Libertad, otros democracia, vestida de justicia oculta su falacia, tiene convencida a toda la población; mensajera de la paz a la que llaman religión"},
     {lang: "es", genre:"hiphop", artist: "Sho Hai", song:"Hodio", quote:"Odio a la estirpe aria que se cree superior, que te ensñe la polla un negro a ver que raza es la inferior"},
     {lang: "es", genre:"hiphop", artist: "Sho Hai", song:"Hodio", quote:"Hay que amar despacio para conservar el amor, odiar rápido para quemar el rencor"},
+    {lang: "es", genre:"hiphop", artist: "Sho Hai", song:"La bella muerte - ft. Kase.O", quote:"Defienden el tablero pero al final del juego, el rey y el peón acaban en la misma caja"},
     {lang: "es", genre:"hiphop", artist: "Rayden", song:"Matemática de la carne", quote:"Te dije hazme lo que quieras y me hiciste a mí sin adjetivos"},
     {lang: "es", genre:"hiphop", artist: "Chojin", song:"El mundo sigue girando", quote:"Hay una salida que espera pro cada laberinto en el que te metas; y eres uno mientras la buscas y pasas a ser otro en cuento la encuentras"},
     {lang: "es", genre:"hiphop", artist: "Chojin", song:"El mundo sigue girando", quote:"No busques finales de cuentos, los cambios ocurren y no hay moralejas"},
